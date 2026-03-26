@@ -16,17 +16,24 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+I used Claude Code.
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+I told AI that there is a bug with the history. It skips logging some guesses. It correctly identified that the number of attempts was being initialized to 1 instead of 0, which was leading to some errors.
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+However, fixing the number of attempts to initialize at 0 fixed a different bug. It didn't fix the error that the history was not logging some guesses. When I prompted AI again, I gave it more details explaining that when clicking Submit Guess, I need to click it twice before the guess is submitted into the history. That may have been why some guesses were not being logged in the history. Claude identified that this is a known Streamlit behavior. The fix was to wrap the input and the button in a st.form to batch them both into a single submission.
 
 ---
 
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
+To check if a bug was really fixed, I ran the game and did a test manually.
+Also, I ran the pytest test cases.
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
+I ran test_guess_too_high. Initially, the test failed even though I knew the bug was fixed. The test failed b/c the test result was asserted to just be "Win". However, the actual result was a tuple ("Too High", "📉 Go LOWER!"). I opted to update the test.
 - Did AI help you design or understand any tests? How?
+I used Claude to design the tests for the history to log attempts. It came up with 3 edge cases, which were relevant.
 
 ---
 
