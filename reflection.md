@@ -4,9 +4,12 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 ## 1. What was broken when you started?
 
-- What did the game look like the first time you ran it?
-- List at least two concrete bugs you noticed at the start  
-  (for example: "the secret number kept changing" or "the hints were backwards").
+- The hint is incorrect. It says the opposite direction.
+- The history skips logging some attempts.
+- Clicking New Game only changes the secret number. It doesn't clear the history or score and does not track attempts or score for the new game.
+- Submitting an incorrect guess doesn't update the attempt, score, or history right away.
+- Changing the difficulty doesn't appear to affect the secret number.
+- The user is allowed to submit numbers outside of the range.
 
 ---
 
