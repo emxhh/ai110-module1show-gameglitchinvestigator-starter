@@ -34,7 +34,7 @@ def check_guess(guess, secret):
         return "Win", "🎉 Correct!"
 
     try:
-        if guess > secret:
+        if guess < secret:
             return "Too High", "📈 Go HIGHER!"
         else:
             return "Too Low", "📉 Go LOWER!"
@@ -42,7 +42,7 @@ def check_guess(guess, secret):
         g = str(guess)
         if g == secret:
             return "Win", "🎉 Correct!"
-        if g > secret:
+        if g < secret:
             return "Too High", "📈 Go HIGHER!"
         return "Too Low", "📉 Go LOWER!"
 
