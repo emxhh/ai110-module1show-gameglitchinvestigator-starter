@@ -25,13 +25,24 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+Purpose:
+* The purpose of this game is to guess the secret number within the number of attempts.
+
+The bugs found included:
+* Incorrect hint and messaging
+* History was not logging correctly
+* Clicking the New Game button does not clear history or score
+* Updating difficulty does not affect the secret number
+* Player is able to submit guesses outside of the number range
+
+Fixes applied:
+* Hint messaging
+* History logging
+* Even numbered attempts
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+![Winning game screenshot](example-game-win.png)
 
 ## 🚀 Stretch Features
 
